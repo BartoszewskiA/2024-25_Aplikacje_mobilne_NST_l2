@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_opis"
+        android:text="Cena:"
+        android:textSize="28sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/et_cena"
+        android:layout_width="0dp"
+        android:textSize="28sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_opis"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_opis"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"/>
+
+    <SeekBar
+        android:id="@+id/sb_raty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_cena"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:min="1"
+        android:max="30"
+        android:progress="12"/>
+
+    <Button
+        android:id="@+id/btn_oblicz"
+        android:text="Oblicz"
+        android:textSize="28sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_wynik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sb_raty"
+        app:layout_constraintBottom_toTopOf="@id/btn_oblicz"
+        android:textSize="28sp"
+        android:layout_margin="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
