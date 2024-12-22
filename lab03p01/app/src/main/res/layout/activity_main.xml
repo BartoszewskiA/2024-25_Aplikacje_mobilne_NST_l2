@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65"/>
+
+    <EditText
+        android:id="@+id/et_cena"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Cena towaru"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:id="@+id/btn_licz"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Licz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@id/et_cena"
+        app:layout_constraintBottom_toBottomOf="@id/et_cena"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+         />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_raty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_cena"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="30dp"
+        android:valueFrom="1"
+        android:valueTo="36"
+        android:stepSize="1"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/slider_raty"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        >
+        <RadioButton
+            android:id="@+id/rb_01"
+            android:text="Grwarancja producenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/rb_02"
+            android:text="Grwarancja +"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_03"
+            android:text="Grwarancja VIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkbox01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ubezpieczenie rat"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup01"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup01"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_wynik"
+        android:textSize="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/checkbox01"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
